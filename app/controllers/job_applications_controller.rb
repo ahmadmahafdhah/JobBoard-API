@@ -1,5 +1,5 @@
 class JobApplicationsController < ApplicationController
-	
+
 	# To make sure users are authenticated before executing any action.
 	before_action :authenticate_user!
 
@@ -53,6 +53,7 @@ class JobApplicationsController < ApplicationController
 			render json: @job_application
 		else
 			render json: @job_application.errors.full_messages
+		end
 	end
 
 	def destroy
